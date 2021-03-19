@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+*~$*.docx
