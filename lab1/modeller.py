@@ -47,8 +47,16 @@ class RequestGenerator:
         return self._generator.next()
 
     def emit_request(self, time):
+        min_rec_qs = float('Inf')
+
         for rec in self._receivers:
-            rec.receive_request(time)
+            if rec.queue.current_queue_size < min_rec_qs:
+                min_rec_qs = rec.queue.current_queue_size
+
+        for rec in self._receivers:
+            if rec.queue.current_queue_size == min_rec_qs:
+                rec.receive_request(time)
+                return rec
 
 
 class Queue:
@@ -140,34 +148,41 @@ class RequestProcessor(RequestGenerator):
 
 
 class Model:
-    def __init__(self, a, b, la, ret_prob):
-        self._generator = RequestGenerator(UniformGenerator(a, b))
-        self._processor = RequestProcessor(PoissonGenerator(la), ret_prob)
-        self._generator.add_receiver(self._processor)
+    def __init__(self, m1, s1, m2, s2, n1, n2, ret_prob):
+        # self._generator = RequestGenerator(NormalGenerator(m1, s1))
+        # self._processor = RequestProcessor(NormalGenerator(m2, s2), ret_prob)
+        # self._generator.add_receiver(self._processor)
+        self._generators = [RequestGenerator(NormalGenerator(m1, s1)) for i in range(n1)]
+        self._processors = [RequestProcessor(NormalGenerator(m2, s2), ret_prob) for i in range(n2)]
 
-    def set_generator(self, m, s):
-        self._generator = RequestGenerator(NormalGenerator(m, s))
-        self._generator.add_receiver(self._processor)
+        for p in self._processors:
+            for g in self._generators:
+                g.add_receiver(p)
 
-    def set_processor(self, m, s, ret_prob):
-        self._generator.remove_receiver(self._processor)
-        self._processor = RequestProcessor(NormalGenerator(m, s), ret_prob)
-        self._generator.add_receiver(self._processor)
+    # def set_generator(self, m, s):
+    #     self._generator = RequestGenerator(NormalGenerator(m, s))
+    #     self._generator.add_receiver(self._processor)
+    #
+    # def set_processor(self, m, s, ret_prob):
+    #     self._generator.remove_receiver(self._processor)
+    #     self._processor = RequestProcessor(NormalGenerator(m, s), ret_prob)
+    #     self._generator.add_receiver(self._processor)
 
-    # def event_based_modelling(self, request_count):
+    # def event_based_modelling(self, modelling_time):
     #     generator = self._generator
     #     processor = self._processor
     #
     #     gen_period = generator.next_time()
     #     proc_period = gen_period + processor.next_time()
-    #     while processor.processed_requests < request_count:
+    #     current_time = 0
+    #     while current_time < modelling_time:
     #         #         while proc_period < request_count:
     #         if gen_period <= proc_period:
-    #             generator.emit_request()
+    #             generator.emit_request(current_time)
     #             gen_period += generator.next_time()
     #         if gen_period >= proc_period:
     #             #                 cur_queue = processor.queue.current_queue_size
-    #             processor.process()
+    #             processor.process(current_time)
     #             #                 if processor.queue.current_queue_size == cur_queue:
     #             #                     request_count += 1
     #             if processor.queue.current_queue_size > 0:
@@ -179,8 +194,8 @@ class Model:
     #             processor.queue.max_queue_size, proc_period)
 
     def time_based_modelling(self, modelling_time, dt):
-        generator = self._generator
-        processor = self._processor
+        generator = self._generators[0]
+        processor = self._processors[0]
 
         gen_period = generator.next_time()
         proc_period = gen_period + processor.next_time()
@@ -208,3 +223,44 @@ class Model:
             processor.queue.recalc_avg_queue_size()
 
         return processor.queue.avg_queue_size, processor.queue.avg_waiting_time
+
+    def time_based_modellingg(self, modelling_time, dt):
+        generators = self._generators
+        processors = self._processors
+
+        gen_pers = [generators[i].next_time() for i in range(len(generators))]
+        proc_pers = [-1 for i in range(len(processors))]
+
+        proc_pers[0] = min(gen_pers) + processors[0].next_time()
+        current_time = 0
+
+        while current_time < modelling_time:
+            #         while current_time < request_count:
+            for i in range(len(processors)):
+                if current_time >= proc_pers[i] >= 0:
+                    processors[i].process(current_time)
+
+                    if processors[i].queue.current_queue_size > 0:
+                        proc_pers[i] += processors[i].next_time()
+                    else:
+                        proc_pers[i] = -1
+
+            for i in range(len(generators)):
+                if gen_pers[i] <= current_time:
+                    proc = generators[i].emit_request(current_time)
+
+                    proc_i = processors.index(proc)
+
+                    if proc_pers[proc_i] == -1:
+                        proc_pers[proc_i] = gen_pers[i] + processors[proc_i].next_time()
+
+                    gen_pers[i] += generators[i].next_time()
+
+            current_time += dt
+
+            for i in range(len(processors)):
+                processors[i].queue.recalc_avg_queue_size()
+
+        return processors[0].queue.avg_queue_size, processors[0].queue.avg_waiting_time
+
+
