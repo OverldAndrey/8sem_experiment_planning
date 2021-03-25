@@ -125,19 +125,28 @@ class MainWindow(QMainWindow):
         model = modeller.Model(mT1, dT1, mT2, dT2, 1, 1, 0)
 
         print('start')
-        QMessageBox.information(self, 'Result', str(model.time_based_modellingg(tmax, 0.001)))
 
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 0.01)
-        # show_plot(x, y)
-        #
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 0.1)
-        # show_plot(x, y)
-        #
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 0.5)
-        # show_plot(x, y)
-        #
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 1)
-        # show_plot(x, y)
+        ro = la / mu
+        avg_queue_size, avg_queue_time, processed_requests = model.time_based_modellingg(tmax, 0.001)
+
+        result = f'Расчетная загрузка системы: {ro}\n' \
+                 f'Средний размер очереди: {avg_queue_size}\n' \
+                 f'Среднее время ожидания: {avg_queue_time}\n' \
+                 f'Обработано заявок: {processed_requests}'
+
+        QMessageBox.information(self, 'Result', result)
+
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 0.01)
+        show_plot(x, y)
+
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 0.1)
+        show_plot(x, y)
+
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 0.5)
+        show_plot(x, y)
+
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 1)
+        show_plot(x, y)
 
     # @pyqtSlot(name='on_pushButton_clicked')
     # def _parse_parameters(self):

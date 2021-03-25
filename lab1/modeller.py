@@ -261,6 +261,6 @@ class Model:
             for i in range(len(processors)):
                 processors[i].queue.recalc_avg_queue_size()
 
-        return processors[0].queue.avg_queue_size, processors[0].queue.avg_waiting_time
-
-
+        return processors[0].queue.avg_queue_size, \
+               processors[0].queue.avg_waiting_time, \
+               processors[0].processed_requests
