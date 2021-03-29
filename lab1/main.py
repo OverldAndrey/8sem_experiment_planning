@@ -28,7 +28,8 @@ def calculate_model_for_graph(calc_params, dla, dmu):
     # dmu = 1
 
     loads1 = np.array([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
-    loads2 = np.arange(0.9, 0.999, 0.001)
+    loads2 = np.arange(0.9, 1, 0.01)
+    loads2 = np.concatenate((loads2, [0.999]))
 
     times1 = []
     times2 = []
@@ -117,8 +118,12 @@ class MainWindow(QMainWindow):
                             print('time')
                             tmax = float(widget.text())
                     except ValueError:
-                        QMessageBox.warning(self, 'Error', 'ValueError')
+                        QMessageBox.warning(self, 'Error', 'Ошибка ввода')
                         return
+
+        if (la <= 0 or dla >= la) or (mu <= 0 or dmu >= mu):
+            QMessageBox.warning(self, 'Error', 'Интенсивности должны быть больше 0')
+            return
 
         mT1, dT1, mT2, dT2 = calculate_params(la, dla, mu, dmu)
 
@@ -136,17 +141,17 @@ class MainWindow(QMainWindow):
 
         QMessageBox.information(self, 'Result', result)
 
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 0.01)
-        # show_plot(x, y)
-        #
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 0.1)
-        # show_plot(x, y)
-        #
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 0.5)
-        # show_plot(x, y)
-        #
-        # x, y = calculate_model_for_graph(calculate_params, 0.05, 1)
-        # show_plot(x, y)
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 0.01)
+        show_plot(x, y)
+
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 0.1)
+        show_plot(x, y)
+
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 0.5)
+        show_plot(x, y)
+
+        x, y = calculate_model_for_graph(calculate_params, 0.05, 1)
+        show_plot(x, y)
 
     # @pyqtSlot(name='on_pushButton_clicked')
     # def _parse_parameters(self):
