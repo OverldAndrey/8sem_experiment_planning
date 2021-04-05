@@ -21,55 +21,76 @@ def calculate_params(la, dla, mu, dmu):
     return mT1, dT1, mT2, dT2
 
 
-def calculate_model_for_graph(calc_params, dla, dmu):
-    la = 1
-    # dla = 0.05
-    mu = 10
-    # dmu = 1
+# def calculate_model_for_graph(calc_params, dla, dmu):
+#     la = 1
+#     # dla = 0.05
+#     mu = 10
+#     # dmu = 1
+#
+#     loads1 = np.array([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
+#     loads2 = np.arange(0.9, 1, 0.01)
+#     loads2 = np.concatenate((loads2, [0.999]))
+#
+#     times1 = []
+#     times2 = []
+#
+#     tmax = 100
+#
+#     for p in loads1:
+#         la = p * mu
+#         m1, d1, m2, d2 = calc_params(la, dla, mu, dmu)
+#
+#         model = modeller.Model(m1, d1, m2, d2, 1, 1, 0)
+#
+#         _, t = model.time_based_modelling(tmax, 0.01)
+#         # print(t)
+#
+#         times1.append(t)
+#
+#     for p in loads2:
+#         la = p * mu
+#         m1, d1, m2, d2 = calc_params(la, dla, mu, dmu)
+#
+#         model = modeller.Model(m1, d1, m2, d2, 1, 1, 0)
+#
+#         _, t = model.time_based_modelling(tmax, 0.001)
+#         # print(t)
+#
+#         times2.append(t)
+#
+#     return np.concatenate(([0], loads1, loads2)), np.concatenate(([times1[0]], times1, times2))
+#
+#
+# def show_plot(x, y):
+#     pyplot.title('Среднее время ожидания')
+#     pyplot.grid(True)
+#     # pyplot.plot(Xdata, Ydata_t)
+#     pyplot.plot(x, y)
+#     pyplot.axis([0, 1, 0, 0.3])
+#     pyplot.xlabel("Коэффициент загрузки")
+#     pyplot.ylabel("Среднее время пребывания в очереди")
+#     pyplot.show()
 
-    loads1 = np.array([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
-    loads2 = np.arange(0.9, 1, 0.01)
-    loads2 = np.concatenate((loads2, [0.999]))
 
-    times1 = []
-    times2 = []
+def process_matrixes(initialMatrix):
+    levelMatrix = [[0.0 for j in range(len(initialMatrix[0]))] for i in range(len(initialMatrix))]
 
-    tmax = 100
+    for i in range(len(initialMatrix)):
+        for j in range(len(initialMatrix[0])):
+            try:
+                levelMatrix[i][j] = float(initialMatrix[i][j])
+            except:
+                levelMatrix[i][j] = 0.0
 
-    for p in loads1:
-        la = p * mu
-        m1, d1, m2, d2 = calc_params(la, dla, mu, dmu)
+    print(levelMatrix)
 
-        model = modeller.Model(m1, d1, m2, d2, 1, 1, 0)
+    extendedPlanningMatrix = list(map(lambda row: row[:-1], levelMatrix.copy()))
 
-        _, t = model.time_based_modelling(tmax, 0.01)
-        # print(t)
+    print(extendedPlanningMatrix)
 
-        times1.append(t)
+    planningMatrix = list(map(lambda row: row[:4], extendedPlanningMatrix.copy()))
 
-    for p in loads2:
-        la = p * mu
-        m1, d1, m2, d2 = calc_params(la, dla, mu, dmu)
-
-        model = modeller.Model(m1, d1, m2, d2, 1, 1, 0)
-
-        _, t = model.time_based_modelling(tmax, 0.001)
-        # print(t)
-
-        times2.append(t)
-
-    return np.concatenate(([0], loads1, loads2)), np.concatenate(([times1[0]], times1, times2))
-
-
-def show_plot(x, y):
-    pyplot.title('Среднее время ожидания')
-    pyplot.grid(True)
-    # pyplot.plot(Xdata, Ydata_t)
-    pyplot.plot(x, y)
-    pyplot.axis([0, 1, 0, 0.3])
-    pyplot.xlabel("Коэффициент загрузки")
-    pyplot.ylabel("Среднее время пребывания в очереди")
-    pyplot.show()
+    print(planningMatrix)
 
 
 class MainWindow(QMainWindow):
@@ -152,6 +173,17 @@ class MainWindow(QMainWindow):
         #
         # x, y = calculate_model_for_graph(calculate_params, 0.05, 1)
         # show_plot(x, y)
+
+    @pyqtSlot(name='on_calculateModelButton_clicked')
+    def on_calculate_model(self):
+        tableWidget = self.ui.tableWidget
+        rows = tableWidget.rowCount()
+        cols = tableWidget.columnCount()
+        planningTable = [[tableWidget.item(i, j).text() for j in range(cols)] for i in range(rows)]
+        # print(self.ui.tableWidget.item(0, 0).text())
+        # print(rows, cols, planningTable)
+        process_matrixes(planningTable)
+        QMessageBox.information(self, "KEK", "kek")
 
     # @pyqtSlot(name='on_pushButton_clicked')
     # def _parse_parameters(self):
