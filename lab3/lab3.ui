@@ -1,0 +1,3732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1031</width>
+    <height>556</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>lab3</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTableWidget" name="bTableWidget">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>72</height>
+       </size>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>68</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>68</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>Значение</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>b0</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b12</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b13</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b14</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b23</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b24</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b34</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b123</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b124</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b134</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b234</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b1234</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="rowCount">
+       <number>17</number>
+      </property>
+      <property name="columnCount">
+       <number>21</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>56</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>56</number>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>22</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>11</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>13</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>14</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>15</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>16</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>17</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x0</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Yл</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Yчн</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>|Y-Yл|</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>|Y-Yчн|</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="4">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="8" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="9" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="9" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="9" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="9" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="9" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="9" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="9" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="10" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="10" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="10" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="10" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="10" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="10" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="10" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="11" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="10">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="11" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="11" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="11" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="11" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="11" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="11" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="12" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="12" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="12" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="12" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="12" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="12" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="12" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="13" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="8">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="9">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="14">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="13" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="13" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="13" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="13" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="13" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="13" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="14" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="5">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="6">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="7">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="11">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="12">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="13">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="14" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="15">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="14" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="14" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="14" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="14" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="14" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="15" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="4">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="5">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="6">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="7">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="8">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="9">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="10">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="11">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="12">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="13">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="15" column="15">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="15" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="15" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="15" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="15" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="15" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="0">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="1">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="2">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="3">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="16" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QTableWidget" name="bTableWidget2">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>72</height>
+       </size>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>68</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>68</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>Значение</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>b0</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b12</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b13</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b14</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b23</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b24</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b34</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b123</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b124</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b134</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b234</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>b1234</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="externalLayout">
+      <item>
+       <layout class="QGridLayout" name="pointLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="arriveIntensityLabel">
+          <property name="text">
+           <string>Интенсивность поступления</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="processIntensityDispersion">
+          <property name="text">
+           <string>0.1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="arriveIntensityDispersion">
+          <property name="text">
+           <string>0.1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="processIntensityDispersionLabel">
+          <property name="text">
+           <string>Разброс интенсивности обработки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="processIntensityLabel">
+          <property name="text">
+           <string>Интенсивность обработки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="arriveIntensity">
+          <property name="text">
+           <string>3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="processIntensity">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="arriveIntensityDispersionLabel">
+          <property name="text">
+           <string>Разброс интенсивности поступления</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="modellingTimeLabel">
+          <property name="text">
+           <string>Время моделирования</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="modellingTime">
+          <property name="text">
+           <string>100</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="calculateButton">
+          <property name="text">
+           <string>Рассчитать</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="zeroLevelButton">
+          <property name="text">
+           <string>Задать нулевой уровень</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="experimentLayout">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Минимум</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Интенсивность поступления</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Разброс интенсивности поступления</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="arriveIntensityDispersionMin">
+          <property name="text">
+           <string>0.01</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Максимум</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QPushButton" name="calculateModelButton">
+          <property name="text">
+           <string>Построить модель</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="processIntensityDispersionMin">
+          <property name="text">
+           <string>0.01</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="arriveIntensityMin">
+          <property name="text">
+           <string>0.5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLineEdit" name="processIntensityDispersionMax">
+          <property name="text">
+           <string>0.1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Интенсивность обработки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="arriveIntensityDispersionMax">
+          <property name="text">
+           <string>0.1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="processIntensityMax">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Разброс интенсивности обработки</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="processIntensityMin">
+          <property name="text">
+           <string>9</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="arriveIntensityMax">
+          <property name="text">
+           <string>3</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <widget class="QTableWidget" name="tableWidget2">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>500</height>
+       </size>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>56</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>56</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x0</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2x3</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x2x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>x1x2x3x4</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Y</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Yл</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Yчн</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>|Y-Yл|</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>|Y-Yчн|</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="0" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="1" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="1" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="1" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="2" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="2" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="2" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="3" column="3">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="3" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="3" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="4" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="4" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="4" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="2">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="5" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="5" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="5" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="6" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="6" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="6" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="7" column="1">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="2">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="3">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </item>
+      <item row="7" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="7" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="0">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item row="8" column="1">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="2">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="3">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="4">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="5">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="6">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="7">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="8">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="9">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="10">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="11">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="12">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="13">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="14">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="15">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="16">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="17">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="18">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="19">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item row="8" column="20">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1031</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
