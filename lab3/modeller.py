@@ -152,7 +152,7 @@ class Model:
         # self._generator = RequestGenerator(NormalGenerator(m1, s1))
         # self._processor = RequestProcessor(NormalGenerator(m2, s2), ret_prob)
         # self._generator.add_receiver(self._processor)
-        self._generators = [RequestGenerator(NormalGenerator(m1, s1)) for i in range(n1)]
+        self._generators = [RequestGenerator(NormalGenerator(m1[i], s1[i])) for i in range(n1)]
         self._processors = [RequestProcessor(NormalGenerator(m2, s2), ret_prob) for i in range(n2)]
 
         for p in self._processors:
