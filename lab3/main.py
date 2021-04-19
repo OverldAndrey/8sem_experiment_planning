@@ -219,17 +219,27 @@ class MainWindow(QMainWindow):
         Yl = np.array(list(map(lambda row: row[:7], planningTable + [checkVector.tolist()]))) @ np.array(
             B[:7])
 
-        self.set_b_table(B[:7] + [0 for i in range(7, len(B))], self.ui.bTableWidget2, 1)
+        Bl = B[:7] + [0 for i in range(7, len(B))]
 
-        # for i in range(0, 64):
-        #     B[i] = B[i] / self.count_eq_rows(planningTable, i)
-        for i in range(0, 22):
-            B[i] = B[i] / self.count_eq_rows(planningTable, i)
-        for i in range(22, 64):
-            B[i] = 0
+        self.set_b_table(Bl, self.ui.bTableWidget2, 1)
+
+        Bpn = B.copy()
+
+        for i in range(0, 64):
+            B[i] = B[i] / self.count_eq_rows(planningTable, i, len(planningTable[0]))
 
         self.set_b_table(B, self.ui.bTableWidget2, 0)
-        Ypn = np.array(planningTable + [checkVector.tolist()]) @ np.array(B)
+
+        for i in range(0, 22):
+            Bpn[i] = Bpn[i] / self.count_eq_rows(planningTable, i, 22)
+        for i in range(22, 64):
+            Bpn[i] = 0
+
+        self.set_b_table(Bpn, self.ui.bTableWidget2, 2)
+
+        # B for fully non-linear, Bpn for quadratic only
+        Ypn = np.array(planningTable + [checkVector.tolist()]) @ np.array(Bpn)
+
         resYList = Y.tolist() + Yt
         for i in range(len(resYList)):
             tableWidget.setItem(i, 65, QTableWidgetItem(str(round(Yl.tolist()[i], 4))))
@@ -239,10 +249,10 @@ class MainWindow(QMainWindow):
             tableWidget.setItem(i, 68, QTableWidgetItem(
                 str(abs(round(round(resYList[i], 6) - round(Ypn.tolist()[i], 6), 6)))))
 
-    def count_eq_rows(self, plTable, i):
+    def count_eq_rows(self, plTable, i, N):
         count = 0
 
-        for j in range(22):  # range(len(plTable[0]))
+        for j in range(N):  # range(len(plTable[0]))  22
             eq = True
             for k in range(len(plTable) - 1):
                 eq = eq and (plTable[k][j] == plTable[k][i])
