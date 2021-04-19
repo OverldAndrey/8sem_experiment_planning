@@ -162,7 +162,7 @@ class MainWindow(QMainWindow):
         print("calculated ffe")
 
         B = (coefMatrix @ Y).tolist()[0]
-        self.set_b_table(B, self.ui.bTableWidget)
+        self.set_b_table(B, self.ui.bTableWidget, 0)
 
         # print(B[:5])
         Yl = np.array(list(map(lambda row: row[:7], planningMatrix.tolist() + [checkVector.tolist()]))) @ np.array(
@@ -216,13 +216,19 @@ class MainWindow(QMainWindow):
 
         B = [np.array([float(planningTable[i][k]) / len(Y) for i in range(len(Y))]) @ Y for k in range(64)]
 
-        for i in range(0, 64):
-            B[i] = B[i] / self.count_eq_rows(planningTable, i)
-
-        self.set_b_table(B, self.ui.bTableWidget2)
-
         Yl = np.array(list(map(lambda row: row[:7], planningTable + [checkVector.tolist()]))) @ np.array(
             B[:7])
+
+        self.set_b_table(B[:7] + [0 for i in range(7, len(B))], self.ui.bTableWidget2, 1)
+
+        # for i in range(0, 64):
+        #     B[i] = B[i] / self.count_eq_rows(planningTable, i)
+        for i in range(0, 22):
+            B[i] = B[i] / self.count_eq_rows(planningTable, i)
+        for i in range(22, 64):
+            B[i] = 0
+
+        self.set_b_table(B, self.ui.bTableWidget2, 0)
         Ypn = np.array(planningTable + [checkVector.tolist()]) @ np.array(B)
         resYList = Y.tolist() + Yt
         for i in range(len(resYList)):
@@ -236,9 +242,9 @@ class MainWindow(QMainWindow):
     def count_eq_rows(self, plTable, i):
         count = 0
 
-        for j in range(len(plTable[0])):
+        for j in range(22):  # range(len(plTable[0]))
             eq = True
-            for k in range(len(plTable)):
+            for k in range(len(plTable) - 1):
                 eq = eq and (plTable[k][j] == plTable[k][i])
             if eq:
                 count += 1
@@ -412,9 +418,9 @@ class MainWindow(QMainWindow):
         for i in range(64):
             tableWidget2.setItem(8, i, QTableWidgetItem(str(round(x[i], 4))))
 
-    def set_b_table(self, B, table):
+    def set_b_table(self, B, table, row):
         for i in range(len(B)):
-            table.setItem(0, i, QTableWidgetItem(str(round(B[i], 7))))
+            table.setItem(row, i, QTableWidgetItem(str(round(B[i], 7))))
 
     def init_table(self):
         table = self.ui.tableWidget
