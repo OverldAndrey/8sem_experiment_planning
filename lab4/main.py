@@ -166,9 +166,12 @@ class MainWindow(QMainWindow):
 
         transPlanningMatrix = np.transpose(planningMatrix.copy())
         B = [(transPlanningMatrix[i] @ Y) / self.calc_b_divider(planningMatrix, i) for i in range(64 + 6)]
-        print(len(B))
+        print(B[0])
 
         self.set_b_table(B, self.ui.bTableWidget, 0)
+
+        # B[0] = B[0] + (B[-6] * self.S + B[-5] * self.S + B[-4] * self.S \
+        #        + B[-3] * self.S + B[-2] * self.S + B[-1] * self.S)
 
         # print(B[:5])
         # Yl = np.array(list(map(lambda row: row[:7], planningMatrix.tolist() + [checkVector.tolist()]))) @ np.array(
