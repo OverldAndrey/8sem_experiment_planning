@@ -30,9 +30,10 @@ class NormalGenerator:
 
 
 class RequestGenerator:
-    def __init__(self, generator):
+    def __init__(self, generator, n=1):
         self._generator = generator
         self._receivers = set()
+        self._n = n
 
     def add_receiver(self, receiver):
         self._receivers.add(receiver)
@@ -55,7 +56,7 @@ class RequestGenerator:
 
         for rec in self._receivers:
             if rec.queue.current_queue_size == min_rec_qs:
-                rec.receive_request(time)
+                rec.receive_request(time, self._n)
                 return rec
 
 
@@ -68,6 +69,7 @@ class Queue:
         self._avg_waiting_time = 0
         self._time_recalcs = 0
         self._arrive_times = []
+        self._requests = []
 
     @property
     def max_queue_size(self):
@@ -85,9 +87,10 @@ class Queue:
     def avg_waiting_time(self):
         return self._avg_waiting_time
 
-    def add(self, time):
+    def add(self, time, n):
         self._current_queue_size += 1
         self._arrive_times.append(time)
+        self._requests.append(n)
 
     def remove(self, time):
         self._current_queue_size -= 1
@@ -97,6 +100,8 @@ class Queue:
         self._time_recalcs += 1
         old_cnt += wait_time
         self._avg_waiting_time = old_cnt / self._time_recalcs
+
+        return self._requests.pop()
 
     def increase_size(self):
         self._max_queue_size += 1
@@ -109,9 +114,10 @@ class Queue:
 
 
 class RequestProcessor(RequestGenerator):
-    def __init__(self, generator, return_probability):
-        super().__init__(generator)
-        self._generator = generator
+    def __init__(self, generator1, generator2, return_probability):
+        super().__init__(generator1)
+        self._generator1 = generator1
+        self._generator2 = generator2
         self._processed_requests = 0
         self._return_probability = return_probability
         self._reentered_requests = 0
@@ -132,19 +138,24 @@ class RequestProcessor(RequestGenerator):
     def process(self, time):
         if self._queue.current_queue_size > 0:
             self._processed_requests += 1
-            self._queue.remove(time)
+            n = self._queue.remove(time)
             self.emit_request(time)
             if nr.random_sample() < self._return_probability:
                 self._reentered_requests += 1
-                self.receive_request(time)
+                self.receive_request(time, n)
 
-    def receive_request(self, time):
-        self._queue.add(time)
+            return n
+
+    def receive_request(self, time, n):
+        self._queue.add(time, n)
         if self._queue.current_queue_size > self._queue.max_queue_size:
             self._queue.increase_size()
 
-    def next_time_period(self):
-        return self._generator.next()
+    def next_time_period(self, n):
+        if n == 1:
+            return self._generator1.next()
+        elif n == 2:
+            return self._generator2.next()
 
 
 class Model:
@@ -152,8 +163,9 @@ class Model:
         # self._generator = RequestGenerator(NormalGenerator(m1, s1))
         # self._processor = RequestProcessor(NormalGenerator(m2, s2), ret_prob)
         # self._generator.add_receiver(self._processor)
-        self._generators = [RequestGenerator(NormalGenerator(m1[i], s1[i])) for i in range(n1)]
-        self._processors = [RequestProcessor(NormalGenerator(m2, s2), ret_prob) for i in range(n2)]
+        self._generators = [RequestGenerator(NormalGenerator(m1[i], s1[i]), i + 1) for i in range(n1)]
+        self._processors = [RequestProcessor(NormalGenerator(m2[0], s2[0]),
+                                             NormalGenerator(m2[1], s2[1]), ret_prob) for i in range(n2)]
 
         for p in self._processors:
             for g in self._generators:
@@ -238,10 +250,10 @@ class Model:
             #         while current_time < request_count:
             for i in range(len(processors)):
                 if current_time >= proc_pers[i] >= 0:
-                    processors[i].process(current_time)
+                    n = processors[i].process(current_time)
 
                     if processors[i].queue.current_queue_size > 0:
-                        proc_pers[i] += processors[i].next_time()
+                        proc_pers[i] += processors[i].next_time_period(n)
                     else:
                         proc_pers[i] = -1
 

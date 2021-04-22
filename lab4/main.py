@@ -108,7 +108,7 @@ class MainWindow(QMainWindow):
 
         mT11, dT11, mT12, dT12, mT21, dT21, mT22, dT22 = calculate_params(la1, dla1, la2, dla2, mu1, dmu1, mu2, dmu2)
 
-        model = modeller.Model([mT11, mT12], [dT11, dT12], mT21, dT21, 2, 1, 0)
+        model = modeller.Model([mT11, mT12], [dT11, dT12], [mT21, mT22], [dT21, dT22], 2, 1, 0)
 
         print('start')
 
@@ -161,7 +161,7 @@ class MainWindow(QMainWindow):
 
             # print(i, mT11, dT11, mT12, dT12, mT2, dT2)
 
-            model = modeller.Model([mT11, mT12], [dT11, dT12], mT21, dT21, 2, 1, 0)
+            model = modeller.Model([mT11, mT12], [dT11, dT12], [mT21, mT22], [dT21, dT22], 2, 1, 0)
 
             avg_queue_size, avg_queue_time, processed_requests = model.time_based_modellingg(100, 0.001)
 
@@ -179,8 +179,8 @@ class MainWindow(QMainWindow):
 
         self.set_b_table(B, self.ui.bTableWidget, 0)
 
-        # B[0] = B[0] + (B[-6] * self.S + B[-5] * self.S + B[-4] * self.S \
-        #        + B[-3] * self.S + B[-2] * self.S + B[-1] * self.S)
+        B[0] = B[0] + (B[-8] * self.S + B[-7] * self.S + B[-6] * self.S + B[-5] * self.S \
+               + B[-4] * self.S + B[-3] * self.S + B[-2] * self.S + B[-1] * self.S)
 
         # print(B[:5])
         # Yl = np.array(list(map(lambda row: row[:7], planningMatrix.tolist() + [checkVector.tolist()]))) @ np.array(
@@ -226,10 +226,10 @@ class MainWindow(QMainWindow):
                         self.la2 = round((Xmin[2] + Xmax[2]) / 2, 4)
                     elif objName == 'processIntensity1':
                         widget.setText(str(round((Xmin[4] + Xmax[4]) / 2, 4)))
-                        self.mu = round((Xmin[4] + Xmax[4]) / 2, 4)
+                        self.mu1 = round((Xmin[4] + Xmax[4]) / 2, 4)
                     elif objName == 'processIntensity2':
                         widget.setText(str(round((Xmin[6] + Xmax[6]) / 2, 4)))
-                        self.mu = round((Xmin[6] + Xmax[6]) / 2, 4)
+                        self.mu2 = round((Xmin[6] + Xmax[6]) / 2, 4)
                     elif objName == 'arriveIntensityDispersion1':
                         widget.setText(str(round((Xmin[1] + Xmax[1]) / 2, 4)))
                         self.dla1 = round((Xmin[1] + Xmax[1]) / 2, 4)
@@ -238,10 +238,10 @@ class MainWindow(QMainWindow):
                         self.dla2 = round((Xmin[3] + Xmax[3]) / 2, 4)
                     elif objName == 'processIntensityDispersion1':
                         widget.setText(str(round((Xmin[5] + Xmax[5]) / 2, 4)))
-                        self.dmu = round((Xmin[5] + Xmax[5]) / 2, 4)
+                        self.dmu1 = round((Xmin[5] + Xmax[5]) / 2, 4)
                     elif objName == 'processIntensityDispersion2':
                         widget.setText(str(round((Xmin[7] + Xmax[7]) / 2, 4)))
-                        self.dmu = round((Xmin[7] + Xmax[7]) / 2, 4)
+                        self.dmu2 = round((Xmin[7] + Xmax[7]) / 2, 4)
 
         self.set_free_point()
 
